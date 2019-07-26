@@ -1,0 +1,23 @@
+@value astroneer-charlcoal, astroneer-moonlight, astroneer-nova, astroneer-dew from "stylesheets/shared/colors.module.css";
+@value astroneerSansSerif--medium from "stylesheets/shared/fonts.module.css";
+@value padding-default from "stylesheets/shared/dimensions.module.css";
+@value fastest-transition from "stylesheets/shared/transitions.module.css";
+
+.root {
+  overflow: hidden;
+  flex: 0 0 auto;
+  grid-column: 1;
+  grid-row: 2;
+  width: 72px;
+}
+
+.root,
+.root__paper {
+  width: 72px;
+  position: relative !important;
+}
+
+.root--open,
+.root--open .root__paper {
+  width: 240px;
+}

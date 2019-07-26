@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "mikestead.dotenv",
+      "xabikos.reactsnippets",
+      "eamodio.gitlens",
+  ]
+}

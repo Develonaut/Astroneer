@@ -1,0 +1,40 @@
+# Custom image with node and the aws cli bundled.
+image: fofir/node-aws-cli
+
+# Defines the stages of our pipeline process.
+stages:
+  - deploy
+
+variables:
+  AWS_DEFAULT_REGION: us-east-1
+  BUCKET: push-astroneer
+
+# Cache the node_modules created by npm install.
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+# Deploy to production job.
+deploy_production:
+  # Used in the build stage.
+  stage: deploy
+  # Defines which Gitlab shared runners to use
+  # Note: without this Gitlab likes to take a looooong
+  # time before starting the pending job.
+  tags:
+    - gitlab-org
+  # Only run this job if the branch is "master".
+  only:
+    - master
+  # Clears out the old files from the S3 Buckets.
+  # Then copies the artifacted build folder to the buckets.
+  script:
+    - npm run build
+    - echo "Cleaning S3 Bucket";
+    - aws s3 rm s3://${BUCKET} --recursive
+    - aws s3 cp build s3://${BUCKET} --recursive
+    - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths '/*'
+    - echo "Succesfully deployed to S3 Buckets"

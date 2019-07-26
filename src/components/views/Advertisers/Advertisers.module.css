@@ -1,0 +1,9 @@
+@value header-height from "stylesheets/shared/dimensions.module.css";
+
+.root {
+  display: inline-grid;
+  grid-template-rows: auto;
+  grid-template-columns: min-content auto;
+  width: 100%;
+  height: 100%;
+}

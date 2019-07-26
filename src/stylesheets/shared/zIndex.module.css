@@ -1,0 +1,40 @@
+/*
+The index scale values should always be defined in _z-index.scss. This
+allows us to at a glance determine relative layers of our application and prevents bugs
+arrising from arbitrary z-index values. Do not edit the z-index scale! Only add application
+scoped z-index values.
+Z-Index Scale (private vars)
+--------------------------------------------------
+*/
+@value zIndex-1:  -100;
+@value zIndex0:   0;
+@value zIndex1:   100;
+@value zIndex2:   200;
+@value zIndex3:   300;
+@value zIndex4:   400;
+@value zIndex5:   500;
+@value zIndex6:   600;
+@value zIndex7:   700;
+@value zIndex8:   800;
+@value zIndex9:   900;
+@value zIndex10:  1000;
+/*
+Z-Index Applications
+--------------------------------------------------
+*/
+@value zIndex-AdsHeader__relative-section zIndex3;
+
+@value zIndex-Auth--root--mask:           zIndex4;
+
+@value zIndex-Auth--hero--illustration:   zIndex5;
+@value zIndex-Action-button:              zIndex5;
+@value zIndex-ControlBar                  zIndex5;
+
+@value zIndex-Auth--login-form:           zIndex6;
+
+@value zIndex-Auth--logo:                 zIndex7;
+
+@value zIndex-Modal:                      zIndex10;
+/*
+--------------------------------------------------
+*/

@@ -1,0 +1,18 @@
+.astroneerSansSerif--medium {
+  font-family: "Open+Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.astroneerSansSerif--bold {
+  font-family: "Open+Sans", sans-serif;
+  line-height: 1.17;
+  font-weight: 700;
+}
+
+.astroneerSansSerif--black {
+  font-family: "Open+Sans", sans-serif;
+  line-height: 1.17;
+  letter-spacing: -2px;
+  font-weight: 900;
+}

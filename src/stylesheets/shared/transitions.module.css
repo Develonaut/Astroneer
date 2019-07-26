@@ -1,0 +1,7 @@
+@value fast-transition: 200ms ease-in;
+@value faster-transition: 150ms ease-in;
+@value fastest-transition: 100ms ease-in;
+@value slow-transition: 300ms ease-in;
+@value slower-transition: 400ms ease-in;
+@value slower-transition: 500ms ease-in;
+

@@ -1,0 +1,29 @@
+.root {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-width: 2px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.root__label {
+  display: block;
+  position: relative;
+  z-index: 600;
+}
+
+.root__preview {
+  z-index: 500;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom : 0;
+}

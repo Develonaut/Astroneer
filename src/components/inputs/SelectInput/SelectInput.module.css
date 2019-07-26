@@ -1,0 +1,13 @@
+@value bottomMargin from "components/inputs/TextInput/TextInput.module.css";
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px 54px;
+  grid-gap: 10px;
+  margin-bottom: bottomMargin;
+}
+
+.root__label {
+  grid-column:  1 / -1;
+}
